@@ -1,0 +1,91 @@
+<!DOCTYPE html> <!--version de HTML a utilizar
+     para saber como se debe interpretar. No es una etiqueta-->
+<html>
+    <head>
+        <!--se escriben los metadatos, es decir,
+        datos que describen otros datos, titulo de la pagina, caracteres a usar,
+        forma en que se muestra la pagina, etc.-->
+        <title>CV de Edgar Tornez</title><!--todas las paginas deben llevar esta etiqueta-->
+        <meta charset="utf-8"><!--esta si se puede repetir y es para especificar los caracteres que se utilizan dependiendo el lenguaje-->
+        <meta name="description" content="Edgar es un desarrollador web amateur pero con 3 años de experiencia en POO"><!--hasta 160 caracteres y es un resumen de la pagina-->
+        <meta name="og:title" content="CV de Edgar Tornez">
+        <meta name="og:description" content="Edgar es un desarrollador web amateur pero con 3 años de experiencia en POO">
+        <meta name="pg:url" content="http://edgar.me">
+        <meta name="og:site_name" content="Proyectos personales Edgar">
+        <meta name="og:type" content="website">
+        <!--<meta name="og:image" content="<url-imagen>">-->
+        
+    </head> <!--solo se coloca una vez-->
+    <body style="font-family:Times New Roman, Times, serif;margin:0;">
+        <header style="background-color: #ab34eb;color:white;text-align:center;padding:16px">
+            <h1 style="display:inline-block;width:400px;font-weight:bold"> CV de Edgar Tornez</h1> <!--el h1 solo una vez en todo el doc-->
+            <p style="display:inline-block;width:400px;font-weight:600">Frontend Developer</p>
+        </header><!--especifica encabezados en nuestra pagina,puede haber varias y es para todos los encabezados de la pagina-->
+        <!--<p nombre="valor"></p>-->
+        <!--<input autofocus>es un boolean, vuelve todo verdadero-->
+        <div style="background-color: #936db5;color:white;text-align:center;padding:10px">
+            Amateur web developer with 3 years of experience in POO
+        </div>
+        <section>
+            <div style="width:900px;margin-right: auto;margin-left: auto;">
+                <div style="display:inline-block;width:68%;vertical-align:top;">
+                    <h3 style="font-size:36px;font-weight:700;">Education</h3>
+                    <!--existen 3 tipos de listas:ordenadas (<ol></ol>  y tienen orden consecutivo), desordenadas(<ul></ul>, 
+                        no respetan un orden y son las mas usadas) y de definicion (<dl></dl> y <dt><dd>)-->
+                    <div>
+                        <dl>
+                            <dt style="font-size:22px; text-transform:uppercase;margin-bottom:12px;margin-top:36px">Mechatronic Engineer</dt> <!--Solo importa el ultimo grado de estudio-->
+                            <dd> 2017-2022, Benemerita Universidad Autonoma de Puebla</dd>
+                            <dt style="font-size:22px; text-transform:uppercase;margin-bottom:12px;margin-top:36px">Cambridge</dt>
+                            <dd>Late 2021</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div style="display:inline-block;width:30%;margin-top:20px;" >
+                    <img src="img/WhatsApp Image 2019-11-12 at 14.14.37.jpeg" width="200px"> <!--esta etiqueta no se cierra, debido a que el navegador ignora la declaracion que se ponga-->
+                </div>
+                <div style="margin-top:70px;">
+                    <h3 style="font-size:36px;font-weight:700;">Professional experience</h3>
+                    <div>
+                        <dl>
+                            <dt style="font-size:22px; text-transform:uppercase;margin-bottom:12px;margin-top:36px">Freelance developer</dt> 
+                            <dd>2018-Actual.Developing solutions related with POO and web design.</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div style="margin-top:70px;">
+                    <h3 style="font-size:36px;font-weight:700;">Awards</h3>
+                    <div>
+                        <dl>
+                            <dt style="font-size:22px; text-transform:uppercase;margin-bottom:12px;margin-top:36px">None</dt> 
+                            <dd></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div style="margin-top:70px;">
+                    <h3 style="font-size:36px;font-weight:700;">Others</h3>
+                    <div>
+                        <ul style="margin-top: 12px;padding: 0;">
+                            <li style="margin-top: 16px;">Web developing professional course</li> 
+                            <li style="margin-top: 16px;">Introduction to web development: CSS and HTML</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top:70px;">
+                    <h3 style="font-size:36px;font-weight:700;">Social accounts</h3>
+                    <div>
+                        <ul style="margin-top: 12px;padding: 0;">
+                            <li style="margin-top: 16px;">
+                                <a href="https://twitter.com/EdgarTornez10" target="_blank">Twitter</a>
+                            </li>
+                            <li style="margin-top: 16px;">
+                                <a href="https://github.com/kickfalcon" target="_blank">Github</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section><!--separa secciones para nuestra pagina y no afecta como se ve la pagina-->
+    </body> <!--todo lo visible en la pagina-->
+
+</html><!--todos los elementos van dentro de esta etiqueta-->
