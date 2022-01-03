@@ -1,0 +1,202 @@
+
+/*
+Pallete: Argon
+Negro: #03001e
+Morado: #7303c0
+Rosa: #ec38bc
+blanco:#fdeff9
+rosa: #d500f9
+*/
+/*aquí se tiene la configuración de los selectores
+    http.color.adobe.com para crear la rueda de tonos
+    coolors.co para revisar paletas de color existentes
+    uigradients.com y webgradients da los degradados*/
+/*flexboxfroggy.com para aprender a usar flexbox para posicionar elementos*/
+/*
+Importante, revisar este apartado que permite cambiar la fuente
+@font-face {
+    font-family: 'Gwendolyn', cursive;/*obligatorio*/
+    /*src: url(); /*obligatorio*/
+/*}hay que tener cuidado porque muchas requieren licencia, 
+    para usar fuentes que no requieren licencia se puede visitar 
+    fonts.google.com*/
+/*especificidad: permite saber que declaracion utilizar sobre otras
+y la precedencia es el orden en que el navegador decidira que declaracion
+debe aplicar:
+    1.important
+    2.style
+    Para los selectores: 
+    1.Selectores por ID
+    2.Selectores de clase,atributos y pseudoclases
+    3.Selectores de tipo y pseudo elementos*/
+/*Hay dos tipos de medida: relativas y absolutas, las absolutas tienen 
+el mismo valor sin importar el dispositivo a utilizar, la resolucion,
+es decir ningun factor externo las altera (pixeles,centimetros,
+milimetros, picas y puntos). 
+Mientras que al tener medidas relativas, la pagina se adapta permitiendo
+una mejor experiencia*/
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none;/*quita el subrayado de los links*/
+    color: #d500f9;
+}/*modificaciones a los links*/
+img{
+    max-width: 100%;
+}
+a:hover{
+    opacity:0.8;/*recibe valores del 0 al 1*/
+}/*esta es una pseudoclase tambien esta active, focus, etc.*/
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+.container{
+    background: #03001e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*height:100%; relativo al nodo padre, es decir, depende del body*/
+    height: 100vh;
+    /*width: 100vw; no se requiere porque se ajusta de manera predeterminada*/
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.content{
+    max-width: 960px;
+    max-height: 500px;
+    width: 100%;
+    height: 80vh;
+    background-color: #ffffff;
+    box-shadow:0px 3px 6x rgba(0,0,0,0.16), 0 3px 6px rgba (0,0,0,0.23) ;
+    border-radius:4px;
+    position: relative;
+    
+    /*overflow:hidden ;*/
+    overflow: scroll;
+    /*El box-shadow considera: 
+        diferencia Horizontal
+        Diferencia Vertical
+        Desenfoque
+        Amplitud
+        Color*/
+}
+.content{
+    padding:1em;
+}
+td{
+    display:block;
+    width:100%;
+}
+td:nth-of-type(1){
+    font-size: 1.5em;
+    font-weight: bold;
+    color:#7303c0 ;
+}
+th{
+    display: none;
+}
+.actions{
+    position: absolute;
+    top: 1em;
+    right:1em;
+}
+.close{
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    background-color: #7303c0;
+    box-shadow:0px 3px 6x rgba(0,0,0,0.16), 0 3px 6px rgba (0,0,0,0.23) ;
+    display: inline-block;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+
+}
+.paragraph{
+    line-height:2em; 
+    font-weight: 300;
+}
+.table{
+    width: 100%;
+    /*en crhome, los bordes de la celda se crean con un espacio de separacion de 2px*/
+    border-spacing: 0;
+}/*se aplican a todos los elementos de la clase table*/
+.table td, .table th{
+    /*aplica para ambos elementos de la clase "table"*/
+    padding:1em;
+    text-align: left;
+}
+/*pseudoclase: se ocupa para definir propiedades para un elemento
+    cuando se encuentra en un estado en especifico, en este caso
+    la pseudoclase es nth-child*/
+.table tr:nth-child(odd){background-color: #fdeff9;}
+.title-item{
+    /*shorthand properties*/
+    border-bottom: solid 2pX #7303c0; 
+    padding-bottom:1em;
+    font-size: 2em;
+    /*el Padding se aplica: un valor para arriba/abajo y otro
+    para izquierda/derecha*/
+
+    /*Sin shorthand properties*/
+
+    /*border-bottom-style: solid;*/ /*tipo de borde a dibujar*/
+    /*border-width: 2px;*/ /*grosor del border*/
+    /*border-color: #7303c0;*/
+    /*padding-bottom: 1em;*/ /*espaciado respecto al margen del fondo*/
+    /*Cuando pones el padding se sigue el sentido de las manecillas del reloj
+    arriba=>derecha=>abajo=>izquierda*/
+}
+/*Hover es el estado en el que se encuentra un elemento cuando se pasa el 
+mouse por encima de este*/
+.position{
+    background-color:#7303c0;
+    color: white;
+    padding:10px;
+    border-radius: 4px;
+    margin-right: 0.5em;
+    /*border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;*/
+}
+/*la propiedad position permite saber como los propiedades (top, bottom, 
+left, rigth) del elemento afectaran el lugar donde este aparece. Al 
+crear un elemento este aparece con la propiedad static.*/
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 300px;
+}
+/* mediaqueries: especificar una serie de propiedades que se aplican si una conidicon 
+se cumple*/
+/*@media print{}*//*condiciones para cuando se va a imprimir la pagina*/
+@media (min-width:900px){
+    th{
+        display: table-cell;
+    }
+    td{
+        display: table-cell;
+        width: auto;
+    }
+    td:nth-of-type(1){
+        font-size:1em ;
+    }
+    .content{
+        padding: 1.8em;
+    }
+}
+@media (min-height:550px) {
+    .content{
+        height: 500px;
+    }
+}
+/*mobile first: es diseñar primero para las pantallas pequeñas primero, 
+luego las adaptas a las más grandes, el diseño inicial debe ser para 
+pantallas chicas, para despues usar las mediaqueries para adaptarla 
+a las pantallas grandes.*/
